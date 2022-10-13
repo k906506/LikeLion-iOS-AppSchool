@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="17150" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="21225" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17150"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21225"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -11,9 +12,10 @@
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
-        <customObject id="-3" userLabel="Application"/>
-        <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModuleProvider="">
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customObject id="Voe-Tx-rLC" customClass="AppDelegate">
             <connections>
+                <outlet property="textLabel" destination="fKS-ll-9qo" id="XHX-oT-Jdq"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
             </connections>
         </customObject>
@@ -684,10 +686,49 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="335" y="390" width="480" height="360"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1415"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1055"/>
             <view key="contentView" id="EiT-Mj-1SZ">
                 <rect key="frame" x="0.0" y="0.0" width="480" height="360"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="LP3-Gq-Pt6">
+                        <rect key="frame" x="179" y="163" width="123" height="32"/>
+                        <buttonCell key="cell" type="push" title="Send Message" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Lkw-Pn-pjH">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="tapSendMessageButton:" target="Voe-Tx-rLC" id="qyu-UJ-d37"/>
+                        </connections>
+                    </button>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="fKS-ll-9qo">
+                        <rect key="frame" x="46" y="238" width="388" height="20"/>
+                        <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="안녕하세요! 😀" id="ct8-Vc-pgf">
+                            <font key="font" size="20" name=".AppleSDGothicNeoI-Bold"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="yf0-zH-4BK">
+                        <rect key="frame" x="179" y="131" width="123" height="32"/>
+                        <buttonCell key="cell" type="push" title="Read Message" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="wYz-MU-fya">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                            <connections>
+                                <action selector="tapReadMessageButton:" target="Voe-Tx-rLC" id="R5A-CO-Gdt"/>
+                            </connections>
+                        </buttonCell>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="fKS-ll-9qo" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="48" id="5oP-Nn-b0l"/>
+                    <constraint firstItem="yf0-zH-4BK" firstAttribute="centerX" secondItem="EiT-Mj-1SZ" secondAttribute="centerX" id="6ll-nr-KzL"/>
+                    <constraint firstItem="LP3-Gq-Pt6" firstAttribute="top" secondItem="fKS-ll-9qo" secondAttribute="bottom" constant="48" id="KcQ-aO-GJb"/>
+                    <constraint firstItem="LP3-Gq-Pt6" firstAttribute="centerX" secondItem="EiT-Mj-1SZ" secondAttribute="centerX" id="mgr-Xk-EJ5"/>
+                    <constraint firstAttribute="trailing" secondItem="fKS-ll-9qo" secondAttribute="trailing" constant="48" id="my1-KL-ted"/>
+                    <constraint firstItem="LP3-Gq-Pt6" firstAttribute="centerY" secondItem="EiT-Mj-1SZ" secondAttribute="centerY" id="q1X-AZ-szE"/>
+                    <constraint firstItem="yf0-zH-4BK" firstAttribute="top" secondItem="LP3-Gq-Pt6" secondAttribute="bottom" constant="12" id="xmx-2e-uem"/>
+                </constraints>
             </view>
             <point key="canvasLocation" x="200" y="400"/>
         </window>

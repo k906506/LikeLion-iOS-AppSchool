@@ -10,12 +10,17 @@
 @interface AppDelegate ()
 
 @property (strong) IBOutlet NSWindow *window;
+@property (weak) IBOutlet NSTextField *textLabel;
+
+@property BOOL state;
+
 @end
 
 @implementation AppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     // Insert code here to initialize your application
+    self.state = false;
 }
 
 
@@ -26,6 +31,21 @@
 
 - (BOOL)applicationSupportsSecureRestorableState:(NSApplication *)app {
     return YES;
+}
+
+- (IBAction)tapSendMessageButton:(id)sender {
+    if (self.state) {
+        self.textLabel.stringValue = @"안녕하세요! 😀";
+    } else {
+        self.textLabel.stringValue = @"안녕히계세요! 🙇‍♂️";
+    }
+    self.state = !self.state;
+}
+
+- (IBAction)tapReadMessageButton:(id)sender {
+    // NSSpeechSynthesizer를 통해 TTS 기능 삽입
+    NSSpeechSynthesizer *synthesizer = [[NSSpeechSynthesizer alloc] init];
+    [synthesizer startSpeakingString:self.textLabel.stringValue];
 }
 
 
