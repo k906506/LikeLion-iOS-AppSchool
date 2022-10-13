@@ -11,6 +11,7 @@
 
 @property (strong) IBOutlet NSWindow *window;
 @property (weak) IBOutlet NSTextField *textLabel;
+@property (weak) IBOutlet NSTextField *textField;
 
 @property BOOL state;
 
@@ -20,7 +21,7 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     // Insert code here to initialize your application
-    self.state = false;
+    self.state = false; // 상태 값 저장하는 변수 초기화
 }
 
 
@@ -34,12 +35,14 @@
 }
 
 - (IBAction)tapSendMessageButton:(id)sender {
-    if (self.state) {
+    if (!self.state) {
         self.textLabel.stringValue = @"안녕하세요! 😀";
     } else {
         self.textLabel.stringValue = @"안녕히계세요! 🙇‍♂️";
     }
     self.state = !self.state;
+    
+    NSLog(@"%@", self.textLabel.stringValue);
 }
 
 - (IBAction)tapReadMessageButton:(id)sender {
@@ -48,5 +51,8 @@
     [synthesizer startSpeakingString:self.textLabel.stringValue];
 }
 
+- (IBAction)tapChangeMessageButton:(id)sender {
+    self.textLabel.stringValue = self.textField.stringValue;
+}
 
 @end
