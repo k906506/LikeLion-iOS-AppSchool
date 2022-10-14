@@ -38,6 +38,9 @@
                                                             <fontDescription key="titleFontDescription" type="system" pointSize="28"/>
                                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="tapCalculateOrClearButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oRl-b4-CAB"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4wT-Cj-eRM">
                                                         <rect key="frame" x="91.666666666666657" y="0.0" width="83.666666666666657" height="83.666666666666671"/>
@@ -52,6 +55,9 @@
                                                             <fontDescription key="titleFontDescription" type="system" pointSize="28"/>
                                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="tapNeedOneOperandButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Yj-Id-g22"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z02-YY-sGT">
                                                         <rect key="frame" x="183.33333333333334" y="0.0" width="83.666666666666657" height="83.666666666666671"/>
@@ -66,6 +72,9 @@
                                                             <fontDescription key="titleFontDescription" type="system" pointSize="28"/>
                                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="tapNeedOneOperandButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vev-eA-Zrl"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sca-ed-GQd">
                                                         <rect key="frame" x="275" y="0.0" width="83.666666666666686" height="83.666666666666671"/>
@@ -80,6 +89,9 @@
                                                             <fontDescription key="titleFontDescription" type="system" pointSize="28"/>
                                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="tapOperatorButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SCE-Xl-H99"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -99,6 +111,9 @@
                                                             <fontDescription key="titleFontDescription" type="system" pointSize="28"/>
                                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="tapDecimalButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="U53-wT-Di6"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KhD-Pq-XxX">
                                                         <rect key="frame" x="91.666666666666657" y="0.0" width="83.666666666666657" height="83.666666666666671"/>
@@ -113,6 +128,9 @@
                                                             <fontDescription key="titleFontDescription" type="system" pointSize="28"/>
                                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="tapDecimalButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kYy-WP-glV"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qiz-pB-8bR">
                                                         <rect key="frame" x="183.33333333333334" y="0.0" width="83.666666666666657" height="83.666666666666671"/>
@@ -127,6 +145,9 @@
                                                             <fontDescription key="titleFontDescription" type="system" pointSize="28"/>
                                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="tapDecimalButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UHt-1o-kNH"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lVL-tT-oVX">
                                                         <rect key="frame" x="275" y="0.0" width="83.666666666666686" height="83.666666666666671"/>
@@ -141,6 +162,9 @@
                                                             <fontDescription key="titleFontDescription" type="system" pointSize="28"/>
                                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="tapOperatorButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MVp-0a-BaS"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -160,6 +184,9 @@
                                                             <fontDescription key="titleFontDescription" type="system" pointSize="28"/>
                                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="tapDecimalButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lHb-a0-wyv"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5m6-Yc-gkr">
                                                         <rect key="frame" x="91.666666666666657" y="0.0" width="83.666666666666657" height="83.333333333333329"/>
@@ -174,6 +201,9 @@
                                                             <fontDescription key="titleFontDescription" type="system" pointSize="28"/>
                                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="tapDecimalButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GLk-nv-QoY"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="58F-uN-FEY">
                                                         <rect key="frame" x="183.33333333333334" y="0.0" width="83.666666666666657" height="83.333333333333329"/>
@@ -188,6 +218,9 @@
                                                             <fontDescription key="titleFontDescription" type="system" pointSize="28"/>
                                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="tapDecimalButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qnP-8w-L52"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gmW-tb-AhN">
                                                         <rect key="frame" x="275" y="0.0" width="83.666666666666686" height="83.333333333333329"/>
@@ -202,6 +235,9 @@
                                                             <fontDescription key="titleFontDescription" type="system" pointSize="28"/>
                                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="tapOperatorButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VVF-ZB-tr4"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -221,6 +257,9 @@
                                                             <fontDescription key="titleFontDescription" type="system" pointSize="28"/>
                                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="tapDecimalButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GAt-bC-FDo"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Qm-Os-T0H">
                                                         <rect key="frame" x="91.666666666666657" y="0.0" width="83.666666666666657" height="83.666666666666671"/>
@@ -235,6 +274,9 @@
                                                             <fontDescription key="titleFontDescription" type="system" pointSize="28"/>
                                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="tapDecimalButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kDS-XS-guV"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s1b-nv-QGN">
                                                         <rect key="frame" x="183.33333333333334" y="0.0" width="83.666666666666657" height="83.666666666666671"/>
@@ -249,6 +291,9 @@
                                                             <fontDescription key="titleFontDescription" type="system" pointSize="28"/>
                                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="tapDecimalButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hMY-9t-65C"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lkg-6h-1F1">
                                                         <rect key="frame" x="275" y="0.0" width="83.666666666666686" height="83.666666666666671"/>
@@ -263,6 +308,9 @@
                                                             <fontDescription key="titleFontDescription" type="system" pointSize="28"/>
                                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="tapOperatorButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="spQ-tP-7i0"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -279,6 +327,9 @@
                                                             <fontDescription key="titleFontDescription" type="system" pointSize="28"/>
                                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="tapDecimalButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xtA-vr-7bp"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WmW-9d-r8f">
                                                         <rect key="frame" x="183.33333333333334" y="0.0" width="83.666666666666657" height="83.666666666666671"/>
@@ -293,6 +344,9 @@
                                                             <fontDescription key="titleFontDescription" type="system" pointSize="28"/>
                                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="tapDecimalButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BYW-HE-q7B"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QF9-fB-Jz2">
                                                         <rect key="frame" x="275" y="0.0" width="83.666666666666686" height="83.666666666666671"/>
@@ -307,6 +361,9 @@
                                                             <fontDescription key="titleFontDescription" type="system" pointSize="28"/>
                                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="tapCalculateOrClearButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OFq-JR-L19"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -387,6 +444,10 @@
                             <constraint firstItem="cql-bd-dZY" firstAttribute="top" secondItem="WAr-LD-wpq" secondAttribute="bottom" id="psB-be-NbU"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="historyLabel" destination="yUL-F3-IwN" id="apG-dU-yM5"/>
+                        <outlet property="resultLabel" destination="05z-Lh-AVq" id="DlQ-LK-oF2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
