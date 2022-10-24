@@ -18,6 +18,8 @@ struct SetMinMaxSliderView: View {
     @State private var inputNumber: Int = 0
     @State private var isCorrect: Bool = false
     
+    var isFocused: FocusState<Bool>.Binding
+   
     var body: some View {
         VStack(alignment: .center) {
             Toggle(isOn: $isOpen) {
@@ -106,6 +108,7 @@ struct SetMinMaxSliderView: View {
                     .multilineTextAlignment(.center)
                     .keyboardType(.decimalPad)
                     .padding()
+                    .focused(self.isFocused)
                 
                 // 상태 프로퍼티를 단순히 사용만 할 때는 그냥 평소처럼 써도 됨
                 // Text("\(inputNumber)")
@@ -172,8 +175,8 @@ struct SetMinMaxSliderView: View {
     }
 }
 
-struct SetMinMaxSliderView_Previews: PreviewProvider {
-    static var previews: some View {
-        SetMinMaxSliderView()
-    }
-}
+//struct SetMinMaxSliderView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        SetMinMaxSliderView(isFocused: .constant(false))
+//    }
+//}

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ResultView: View {
-    @Binding var isCorrect: Bool
+    @Foc var isCorrect: Bool
     
     var body: some View {
         VStack(alignment: .center) {

@@ -12,8 +12,6 @@
 		C0BE12232901976A00054FCF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0BE12222901976A00054FCF /* Assets.xcassets */; };
 		C0BE12262901976A00054FCF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0BE12252901976A00054FCF /* Preview Assets.xcassets */; };
 		C0BE122D2901986D00054FCF /* SetMinMaxSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BE122C2901986D00054FCF /* SetMinMaxSliderView.swift */; };
-		C0BE122F29023D3E00054FCF /* UserInputNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BE122E29023D3E00054FCF /* UserInputNumberView.swift */; };
-		C0BE1231290252A000054FCF /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BE1230290252A000054FCF /* ResultView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,8 +21,6 @@
 		C0BE12222901976A00054FCF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C0BE12252901976A00054FCF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C0BE122C2901986D00054FCF /* SetMinMaxSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetMinMaxSliderView.swift; sourceTree = "<group>"; };
-		C0BE122E29023D3E00054FCF /* UserInputNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInputNumberView.swift; sourceTree = "<group>"; };
-		C0BE1230290252A000054FCF /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,8 +37,6 @@
 		C0BE12122901976900054FCF = {
 			isa = PBXGroup;
 			children = (
-				C0BE1230290252A000054FCF /* ResultView.swift */,
-				C0BE122E29023D3E00054FCF /* UserInputNumberView.swift */,
 				C0BE121D2901976900054FCF /* 221020_randomNumber */,
 				C0BE121C2901976900054FCF /* Products */,
 			);
@@ -148,9 +142,7 @@
 			files = (
 				C0BE12212901976900054FCF /* ContentView.swift in Sources */,
 				C0BE122D2901986D00054FCF /* SetMinMaxSliderView.swift in Sources */,
-				C0BE1231290252A000054FCF /* ResultView.swift in Sources */,
 				C0BE121F2901976900054FCF /* _21020_randomNumberApp.swift in Sources */,
-				C0BE122F29023D3E00054FCF /* UserInputNumberView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

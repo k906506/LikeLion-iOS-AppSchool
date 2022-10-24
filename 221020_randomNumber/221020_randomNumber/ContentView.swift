@@ -8,13 +8,20 @@
 import SwiftUI
 
 struct ContentView: View {
+    @FocusState private var isFocused: Bool
+    
     var body: some View {
-        VStack {
-            SetMinMaxSliderView()
-            UserInputNumberView()
-            
+        ZStack {
+            VStack {
+                SetMinMaxSliderView(isFocused: self.$isFocused)
+            }
+            .padding()
         }
-        .padding()
+        .background(.white)
+        .onTapGesture {
+            print("hello")
+            isFocused = false
+        }
     }
 }
 
