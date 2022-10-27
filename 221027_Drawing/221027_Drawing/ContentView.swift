@@ -20,22 +20,53 @@ struct ContentView: View {
     
     var body: some View {
         ZStack {
-            CustomCircleView(centerPoint: centerPoints[0], offset: [0, 0], color: colors[0])
+            //            CustomCircleView(centerPoint: centerPoints[0], color: colors[0])
+            //
+            //            CustomCircleView(centerPoint: centerPoints[1], color: colors[1])
+            //
+            //            CustomCircleView(centerPoint: centerPoints[2], color: colors[2])
+            //
+            //            CustomCircleView(centerPoint: centerPoints[3], color: colors[3])
+            //
+            //            CustomCircleView(centerPoint: centerPoints[4], color: colors[4])
             
-            CustomCircleView(centerPoint: centerPoints[1], offset: [0, 0], color: colors[1])
+            StarShape()
+                .fill(.red)
+                .frame(width: 400, height: 400)
             
-            CustomCircleView(centerPoint: centerPoints[2], offset: [0, 0], color: colors[2])
+            StarShape()
+                .fill(.orange)
+                .frame(width: 350, height: 350)
             
-            CustomCircleView(centerPoint: centerPoints[3], offset: [0, 0], color: colors[3])
             
-            CustomCircleView(centerPoint: centerPoints[4], offset: [0, 0], color: colors[4])
+            StarShape()
+                .fill(.yellow)
+                .frame(width: 300, height: 300)
+            
+            StarShape()
+                .fill(.green)
+                .frame(width: 250, height: 250)
+            
+            StarShape()
+                .fill(.blue)
+                .frame(width: 200, height: 200)
+            
+            StarShape()
+                .fill(.purple)
+                .frame(width: 150, height: 150)
+
+            StarShape()
+                .fill(.black)
+                .frame(width: 100, height: 100)
+        
         }
     }
+    
+    
 }
 
 struct CustomCircleView: View {
     var centerPoint: CGPoint
-    var offset: [CGFloat]
     var color: Color
     
     var body: some View {
@@ -49,7 +80,6 @@ struct CustomCircleView: View {
             )
         }
         .stroke(lineWidth: 10)
-        .offset(x: offset[0], y: offset[1])
         .foregroundColor(color)
     }
 }
