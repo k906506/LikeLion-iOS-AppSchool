@@ -8,12 +8,22 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var rotation: Double = 0.0
+    @State private var scale: CGFloat = 1.0
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            Button(action: {
+                withAnimation(.linear(duration: 1).repeatForever(autoreverses: true)) {
+                    rotation = (rotation < 360) ? rotation + 60 : 0
+                }
+                scale = (scale < 2.8) ? scale + 0.3  : 1
+            }) {
+                Text("Click to animate")
+                    .scaleEffect(scale)
+                    .rotationEffect(.degrees(rotation))
+                    .animation(.linear(duration: 1).repeatForever(autoreverses: true), value: scale)
+            }
         }
         .padding()
     }
