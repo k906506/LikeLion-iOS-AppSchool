@@ -11,7 +11,7 @@ import SwiftUI
 struct _21031_GraphicAndAnimationApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().environmentObject(RandomNumber())
         }
     }
 }
