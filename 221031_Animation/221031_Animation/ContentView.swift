@@ -12,20 +12,22 @@ struct ContentView: View {
     @State private var scale: CGFloat = 1.0
     
     var body: some View {
-        VStack {
-            Button(action: {
-                withAnimation(.linear(duration: 1).repeatForever(autoreverses: true)) {
-                    rotation = (rotation < 360) ? rotation + 60 : 0
-                }
-                scale = (scale < 2.8) ? scale + 0.3  : 1
-            }) {
-                Text("Click to animate")
-                    .scaleEffect(scale)
-                    .rotationEffect(.degrees(rotation))
-                    .animation(.linear(duration: 1).repeatForever(autoreverses: true), value: scale)
-            }
-        }
-        .padding()
+        AutoAnimationView()
+//        ToggleOnOffView()
+//        VStack {
+//            Button(action: {
+//                withAnimation(.linear(duration: 1).repeatForever(autoreverses: true)) {
+//                    rotation = (rotation < 360) ? rotation + 60 : 0
+//                }
+//                scale = (scale < 2.8) ? scale + 0.3  : 1
+//            }) {
+//                Text("Click to animate")
+//                    .scaleEffect(scale)
+//                    .rotationEffect(.degrees(rotation))
+//                    .animation(.linear(duration: 1).repeatForever(autoreverses: true), value: scale)
+//            }
+//        }
+//        .padding()
     }
 }
 
