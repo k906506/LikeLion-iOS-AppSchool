@@ -63,7 +63,6 @@
 				C09E419A290F807A00098DED /* _21031_GraphicAndAnimationApp.swift */,
 				C09E419E290F807C00098DED /* Assets.xcassets */,
 				C09E41A0290F807C00098DED /* Preview Content */,
-				C09E41AB290F828400098DED /* RandomNumber.swift */,
 				C09E41B2290F99FE00098DED /* Data */,
 			);
 			path = 221031_GraphicAndAnimation;
@@ -91,6 +90,7 @@
 		C09E41B2290F99FE00098DED /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				C09E41AB290F828400098DED /* RandomNumber.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
