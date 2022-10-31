@@ -10,10 +10,11 @@ import SwiftUI
 struct ContentView: View {
     @State private var section: Int = 0 // 페이지? 개수
     @State private var columnCnt: Int = 5 // 페이지당 그래프 개수
+    @FocusState private var isFocused: Bool
     
     var body: some View {
         VStack {
-            TopSettingView(columnCnt: $columnCnt)
+            TopSettingView(columnCnt: $columnCnt, isFocused: $isFocused)
             Divider()
             Spacer()
             GraphicView(section: $section)
@@ -22,6 +23,9 @@ struct ContentView: View {
             BottomButtonView(section: $section)
         }
         .padding()
+        .onTapGesture {
+            isFocused = false
+        }
     }
 }
 

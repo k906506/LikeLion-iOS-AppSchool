@@ -9,10 +9,11 @@ import SwiftUI
 
 struct TopSettingView: View {
     @Binding var columnCnt: Int
+    var isFocused: FocusState<Bool>.Binding
     
     var body: some View {
         VStack {
-            SetColumnCountView(columnCnt: $columnCnt)
+            SetColumnCountView(columnCnt: $columnCnt, isFocused: isFocused)
             OtherButtonView(columnCnt: $columnCnt)
         }
     }
@@ -21,6 +22,7 @@ struct TopSettingView: View {
 // 페이지당 그래프 개수를 설정하는 뷰
 struct SetColumnCountView: View {
     @Binding var columnCnt: Int
+    var isFocused: FocusState<Bool>.Binding
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -32,6 +34,7 @@ struct SetColumnCountView: View {
                     .keyboardType(.decimalPad)
                     .font(.title)
                     .frame(width: 48, height: 24)
+                    .focused(isFocused)
                 
                 Spacer()
                 
@@ -84,7 +87,7 @@ struct OtherButtonView: View {
             }
             
             Button(action: {
-                randomNumber.sortRandomNumber()
+                randomNumber.sortRandomNumbers()
             }) {
                 Text("난수 정렬하기")
                     .font(.headline)
@@ -100,8 +103,9 @@ struct OtherButtonView: View {
 
 struct TopSettingView_Previews: PreviewProvider {
     @State static private var columnCnt: Int = 0
+    @FocusState static private var isFocused: Bool
     
     static var previews: some View {
-        TopSettingView(columnCnt: $columnCnt)
+        TopSettingView(columnCnt: $columnCnt, isFocused: $isFocused)
     }
 }
