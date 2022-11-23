@@ -8,8 +8,10 @@
 import Foundation
 
 class WebService {
+    static let shared = WebService()
+    
     // json을 T타입의 데이터로 디코딩하는 메소드
-    static func loadJson<T: Decodable>(_ url: String) async throws -> T {
+    func loadJson<T: Decodable>(_ url: String) async throws -> T {
         do {
             let url = URL(string: url)!
             let (data, _) = try await URLSession.shared.data(from: url)

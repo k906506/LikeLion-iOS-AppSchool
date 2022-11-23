@@ -9,6 +9,7 @@ import SwiftUI
 
 struct LectureDetailView: View {
     @EnvironmentObject var lectureVM: LectureViewModel
+    @State private var num: Int = 0
     
     var body: some View {
         if lectureVM.items.isEmpty {
@@ -23,28 +24,32 @@ struct LectureDetailView: View {
                 }
         } else {
             VStack {
-                List(lectureVM.items) { item in
-                    LectureItemView(lecture: item)
-                }
-                .listStyle(.inset)
-                
-                
-                Button(action: {
-                    Task {
-                        do {
-                            try await lectureVM.getLecturesOnServerAtFinishedScroll()
-                        } catch (let error) {
-                            print("Unable to get data : \(error)")
+                ScrollView {
+                    LazyVStack {
+                        ForEach(lectureVM.items) { item in
+                            LectureItemView(lecture: item)
+                                .onAppear {
+                                    guard let index = lectureVM.items.firstIndex(where: { $0.id == item.id }) else { return }
+                                    
+                                    if index % 10 == 9 {
+                                        Task {
+                                            do {
+                                                try await lectureVM.getLecturesOnServerAtFinishedScroll()
+                                            } catch (let error) {
+                                                print("Unable to get data : \(error)")
+                                            }
+                                        }
+                                        
+                                    }
+                                }
                         }
                     }
-                }) {
-                    Text("강좌 가져오기")
                 }
+                .navigationTitle("K-MOOC 강좌 목록")
             }
-            .navigationTitle("K-MOOC 강좌 목록")
         }
+        
     }
-    
 }
 
 //struct LectureDetailView_Previews: PreviewProvider {

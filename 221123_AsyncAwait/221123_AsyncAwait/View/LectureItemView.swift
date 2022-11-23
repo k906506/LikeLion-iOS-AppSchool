@@ -42,8 +42,10 @@ struct LectureItemView: View {
                     .font(.footnote)
             }
             .padding(4)
+            
+            Spacer()
         }
-        .padding(.vertical, 8)
+        .padding(8)
     }
 }
 
