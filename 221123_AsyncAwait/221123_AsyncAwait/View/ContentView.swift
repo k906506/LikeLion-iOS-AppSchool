@@ -10,11 +10,7 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         NavigationStack {
-            NavigationLink(destination: {
-                LectureDetailView()
-            }) {
-                Text("이동")
-            }
+            LectureListView()
         }
     }
 }

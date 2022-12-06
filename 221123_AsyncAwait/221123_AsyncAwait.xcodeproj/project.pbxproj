@@ -13,7 +13,7 @@
 		C07741C0292DB7AD00DEC237 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C07741BF292DB7AD00DEC237 /* Preview Assets.xcassets */; };
 		C07741CB292DBDE300DEC237 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07741CA292DBDE300DEC237 /* WebService.swift */; };
 		C07741CD292DE3B800DEC237 /* Lecture.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07741CC292DE3B800DEC237 /* Lecture.swift */; };
-		C07741CF292DE5B700DEC237 /* LectureDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07741CE292DE5B700DEC237 /* LectureDetailView.swift */; };
+		C07741CF292DE5B700DEC237 /* LectureListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07741CE292DE5B700DEC237 /* LectureListView.swift */; };
 		C07741D2292DE5DB00DEC237 /* LectureViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07741D1292DE5DB00DEC237 /* LectureViewModel.swift */; };
 		C07741D6292DF56400DEC237 /* LectureItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07741D5292DF56400DEC237 /* LectureItemView.swift */; };
 /* End PBXBuildFile section */
@@ -26,7 +26,7 @@
 		C07741BF292DB7AD00DEC237 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C07741CA292DBDE300DEC237 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		C07741CC292DE3B800DEC237 /* Lecture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lecture.swift; sourceTree = "<group>"; };
-		C07741CE292DE5B700DEC237 /* LectureDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureDetailView.swift; sourceTree = "<group>"; };
+		C07741CE292DE5B700DEC237 /* LectureListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureListView.swift; sourceTree = "<group>"; };
 		C07741D1292DE5DB00DEC237 /* LectureViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureViewModel.swift; sourceTree = "<group>"; };
 		C07741D4292DF4C200DEC237 /* -21123-AsyncAwait-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "-21123-AsyncAwait-Info.plist"; sourceTree = SOURCE_ROOT; };
 		C07741D5292DF56400DEC237 /* LectureItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureItemView.swift; sourceTree = "<group>"; };
@@ -63,10 +63,10 @@
 			isa = PBXGroup;
 			children = (
 				C07741D4292DF4C200DEC237 /* -21123-AsyncAwait-Info.plist */,
+				C07741C6292DBB0900DEC237 /* Model */,
 				C07741D3292DEBA000DEC237 /* View */,
 				C07741D0292DE5CD00DEC237 /* ViewModel */,
 				C07741C9292DBDC500DEC237 /* Service */,
-				C07741C6292DBB0900DEC237 /* Model */,
 				C07741B8292DB7AC00DEC237 /* _21123_AsyncAwaitApp.swift */,
 				C07741BC292DB7AD00DEC237 /* Assets.xcassets */,
 				C07741BE292DB7AD00DEC237 /* Preview Content */,
@@ -110,7 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				C07741BA292DB7AC00DEC237 /* ContentView.swift */,
-				C07741CE292DE5B700DEC237 /* LectureDetailView.swift */,
+				C07741CE292DE5B700DEC237 /* LectureListView.swift */,
 				C07741D5292DF56400DEC237 /* LectureItemView.swift */,
 			);
 			path = View;
@@ -187,7 +187,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C07741BB292DB7AC00DEC237 /* ContentView.swift in Sources */,
-				C07741CF292DE5B700DEC237 /* LectureDetailView.swift in Sources */,
+				C07741CF292DE5B700DEC237 /* LectureListView.swift in Sources */,
 				C07741D2292DE5DB00DEC237 /* LectureViewModel.swift in Sources */,
 				C07741CB292DBDE300DEC237 /* WebService.swift in Sources */,
 				C07741B9292DB7AC00DEC237 /* _21123_AsyncAwaitApp.swift in Sources */,
