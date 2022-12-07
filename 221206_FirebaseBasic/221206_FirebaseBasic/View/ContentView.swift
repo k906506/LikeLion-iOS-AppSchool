@@ -18,12 +18,12 @@ struct ContentView: View {
             }.onDelete(perform: delete)
         }
         .onAppear {
-            memoVM.getMemosAtFirebase()
+            memoVM.updateMemosAtFirebase()
         }
         
         Button(action: {
             let id = UUID().uuidString
-            memoVM.setMemoAtFirebase(memo: Memo(id: id, name: id))
+            memoVM.createMemoAtFirebase(memo: Memo(id: id, name: id))
         }) {
             Text("데이터 추가")
         }

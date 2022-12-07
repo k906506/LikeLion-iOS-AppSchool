@@ -17,7 +17,7 @@ class MemoViewModel: ObservableObject {
     private let encoder: JSONEncoder = JSONEncoder()
     private let decoder: JSONDecoder = JSONDecoder()
     
-    func getMemosAtFirebase() {
+    func updateMemosAtFirebase() {
         guard let databasePath = databasePath else { return }
         
         // MARK - 데이터 추가를 위한 Observer
