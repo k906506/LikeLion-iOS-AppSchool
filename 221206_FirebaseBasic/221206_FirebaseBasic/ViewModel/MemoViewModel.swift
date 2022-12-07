@@ -68,7 +68,8 @@ class MemoViewModel: ObservableObject {
             }
     }
     
-    func setMemoAtFirebase(memo: Memo) {
+    // MARK - 데이터 추가를 위한 메소드
+    func createMemoAtFirebase(memo: Memo) {
         let memoToDict: [String: String] = [
             "id" : memo.id,
             "name" : memo.name
@@ -79,6 +80,7 @@ class MemoViewModel: ObservableObject {
         databasePath.updateChildValues([memo.id : memoToDict])
     }
     
+    // MARK - 데이터 삭제를 위한 메소드
     func removeMemoAtFirebase(key: String) {
         guard let databasePath = databasePath else { return }
         
