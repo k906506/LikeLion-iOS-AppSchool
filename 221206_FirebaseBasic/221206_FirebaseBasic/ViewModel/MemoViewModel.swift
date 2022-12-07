@@ -50,22 +50,6 @@ class MemoViewModel: ObservableObject {
                     print("an error occured", error)
                 }
             }
-        
-        // MARK - 데이터 삭제를 위한 Observer
-        databasePath
-            .observe(.childRemoved) { [weak self] snapshot in
-                guard let self = self, let json = snapshot.value as? [String: Any] else { return }
-                
-                do {
-                    let data = try JSONSerialization.data(withJSONObject: json)
-                    let memo: Memo = try self.decoder.decode(Memo.self, from: data)
-                 
-                    guard let index = self.memos.firstIndex(where: { $0.id == memo.id }) else { return }
-                    self.memos.remove(at: index)
-                } catch {
-                    print("an error occured", error)
-                }
-            }
     }
     
     // MARK - 데이터 추가를 위한 메소드
