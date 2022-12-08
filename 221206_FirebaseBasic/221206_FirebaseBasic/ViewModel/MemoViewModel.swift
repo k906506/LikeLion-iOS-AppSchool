@@ -17,7 +17,7 @@ class MemoViewModel: ObservableObject {
     private let encoder: JSONEncoder = JSONEncoder()
     private let decoder: JSONDecoder = JSONDecoder()
     
-    func updateMemosAtFirebase() {
+    func updateMemos() {
         guard let databasePath = databasePath else { return }
         
         // MARK - 데이터 추가를 위한 Observer
@@ -71,7 +71,7 @@ class MemoViewModel: ObservableObject {
     }
     
     // MARK - 데이터 추가를 위한 메소드
-    func createMemoAtFirebase(memo: Memo) {
+    func createMemo(memo: Memo) {
         let memoToDict: [String: String] = [
             "id" : memo.id,
             "name" : memo.name
@@ -83,7 +83,7 @@ class MemoViewModel: ObservableObject {
     }
     
     // MARK - 데이터 삭제를 위한 메소드
-    func removeMemoAtFirebase(key: String) {
+    func removeMemo(key: String) {
         guard let databasePath = databasePath else { return }
         
         databasePath.child(key).removeValue()

@@ -18,12 +18,12 @@ struct ContentView: View {
             }.onDelete(perform: delete)
         }
         .onAppear {
-            memoVM.updateMemosAtFirebase()
+            memoVM.updateMemos()
         }
         
         Button(action: {
             let id = UUID().uuidString
-            memoVM.createMemoAtFirebase(memo: Memo(id: id, name: id))
+            memoVM.createMemo(memo: Memo(id: id, name: id))
         }) {
             Text("데이터 추가")
         }
@@ -34,7 +34,7 @@ struct ContentView: View {
         guard let index = offsets.first else { return }
         let key: String = memoVM.memos[index].id
         
-        memoVM.removeMemoAtFirebase(key: key)
+        memoVM.removeMemo(key: key)
         
         // Array에서 제거
         memoVM.memos.remove(atOffsets: offsets)
